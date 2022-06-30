@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+
+.container {
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+a {
+    display: inline-block;
+    color: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    line-height: initial;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a:not([class]) {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-size: $fontSize;
+    color: $textColor;
+    line-height: 140%;
+}
+
+p:not([class]) {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-size: $fontSize;
+    color: $textColor;
+    line-height: 140%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+picture {
+  display: inline-flex;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+label {
+  display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+input[type="number"] {
+  appearance: textfield;
+}

@@ -1,0 +1,178 @@
+
+.inner {
+position: relative;
+    &__container {
+    }
+    &__body {
+        padding-top: 210px;
+        padding-bottom: 62px;
+
+        @media (max-width: 767px) {
+            padding-top: 230px;
+        }
+    }
+    &__text {
+    }
+    &__title {
+        font-family: 'Arsenal';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(34px, 4.198vw, 55px);
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        max-width: 610px;
+        margin-bottom: 38px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__subtitle {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(16px, 1.374vw, 18px);
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #ADADAD;
+        max-width: 517.84px;
+        margin-bottom: 55px;
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
+        }
+    }
+    &__button {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: clamp(22px, 1.908vw, 25px);
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        background: #107B0E;
+        box-shadow: 0px 16px 24px rgba(16, 123, 14, 0.3);
+        border-radius: 5px;
+        padding: 19px 74px;
+        z-index: 10;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 16px 24px rgba(16, 123, 14, 0.6);
+            }
+        }
+    }
+    &__numbers {
+    }
+}
+
+.numbers {
+    @media (min-width: 767px) {
+        margin-top: -40px;
+    }
+    &__item {
+    }
+    &__title {
+        font-family: 'Arsenal';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 160%;
+        text-align: right;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-bottom: 100px;
+
+        @media (max-width: 767px) {
+            text-align: start;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+    }
+    &__list {
+    }
+    &__pagination {
+       .swiper-pagination-bullet {
+           background-color: rgb(16, 123, 14, .5);
+        opacity: 1!important;
+        border-radius: 8px;
+        transition: all .3s ease;
+       }
+       .swiper-pagination-bullet-active {
+           opacity: 1!important;
+           background-color: #107B0E;
+           width: 32px;
+       }
+    }
+}
+
+.item-numbers {
+    padding: 0 70px 0 52px;
+    height: auto;
+
+    @media (max-width: 767px) {
+        padding: 0 50px 0 10px;
+    }
+    position: relative;
+    @media (min-width: 767px) {
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 100%;
+                background: #fff;
+            }
+        }
+    }
+    &__num {
+        font-family: 'Arsenal';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(25px, 2.672vw, 35px);
+        line-height: 114%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.298vw, 17px);
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #ADADAD;
+    }
+}
+
+.inner__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}

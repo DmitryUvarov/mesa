@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        @@include('_header.html', {
+        "nav": true
+        })
+
+        <main class="page">
+            <section class="page__inner inner">
+                <div class="inner__container container">
+                    <div class="inner__body">
+                        <div class="inner__text">
+                            <h1 class="inner__title">Производство опалубок в Узбекистане</h1>
+                            <p class="inner__subtitle">Передовые технологии и оборудование для бетонирования тоннелей, строительства монолитных домов и различных сооружений.</p>
+                            <button class="inner__button" type="button">ПОДАТЬ ЗАЯВКУ</button>
+                        </div>
+                        <div class="inner__numbers numbers">
+                            <div class="numbers__title">Наш завод в цифрах</div>
+                            <div class="numbers__list swiper numbers-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="numbers__item item-numbers swiper-slide">
+                                        <div class="item-numbers__num">25 000</div>
+                                        <div class="item-numbers__text">Единиц продукции изготовливаем ежемесячно</div>
+                                    </div>
+                                    <div class="numbers__item item-numbers swiper-slide">
+                                        <div class="item-numbers__num">120</div>
+                                        <div class="item-numbers__text">Квалифицированных
+                                            специалистов</div>
+                                    </div>
+                                    <div class="numbers__item item-numbers swiper-slide">
+                                        <div class="item-numbers__num">20 лет</div>
+                                        <div class="item-numbers__text">Опыт производства</div>
+                                    </div>
+                                    <div class="numbers__item item-numbers swiper-slide">
+                                        <div class="item-numbers__num">3 Га</div>
+                                        <div class="item-numbers__text">Территория завода</div>
+                                    </div>
+                                </div>
+                                <div class="swiper-paginations numbers__pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inner__bg">
+                    <img src="img/bg.jpg" alt="">
+                </div>
+            </section>
+        </main>
+
+        @@include('_footer.html')
+    </div>
+
+    @@include('_js.html')
+</body>
+
+</html>

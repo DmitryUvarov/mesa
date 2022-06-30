@@ -1,0 +1,274 @@
+.header {
+    transition: all .3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 50;
+    }
+
+
+
+    &__container {
+
+    }
+    &__body {
+        background-color: #02300C;
+        border-radius: 0 0 10px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        @media (max-width: 991px) {
+            display: grid;
+            grid-template-areas:
+            "a d"
+            "c c";
+            margin: 0 -15px;
+        }
+        @media (max-width: 445px) {
+            padding: 0 20px;
+        }
+    }
+    &__logo {
+        padding-top: 21px;
+        padding-bottom: 18px;
+        padding-right: 50px;
+        z-index: 20;
+        grid-area: a;
+    }
+    &__menu {
+        grid-area: b;
+    }
+    &__contact {
+        grid-area: c;
+    }
+    & .burger {
+        grid-area: d;
+        justify-self: center;
+    }
+}
+body.active {
+    .menu {
+        @media (max-width: 991px) {
+            top: 0;
+        }
+    }
+}
+.menu {
+    @media (min-width: 991px) {
+        padding: 0 23px;
+        border-right: 1px solid #0B3915;
+        border-left: 1px solid #0B3915;
+    }
+    @media (max-width: 991px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        transition: top .3s ease;
+        background-color: #02300C;
+        z-index: 10;
+        padding-top: 100px;
+
+        &__list {
+            flex-direction: column;
+        }
+        &__item {
+            margin-right: 0 !important;
+            & a {
+                font-size: 30px;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        &__item {
+            & a {
+                font-size: 25px;
+            }
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: clamp(30px, 4.198vw, 55px);
+        }
+
+        & a {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-size: clamp(18px, 1.603vw, 21px);
+            line-height: 190%;
+            letter-spacing: 0.01em;
+            color: #fff;
+            position: relative;
+            white-space: nowrap;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1.5px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 9px;
+                transition: all .3s ease;
+
+            }
+            @media (any-hover: hover) {
+                &:hover::after{
+                    width: 120%;
+                    transform: translateX(-10%);
+                }
+            }
+        }
+    }
+}
+
+.contact-header {
+    display: flex;
+    @media (min-width: 991px) {
+        margin-left: 21px;
+    }
+    @media (max-width: 991px) {
+        border-top: 1.5px solid #ddd;
+        padding-top: 15px;
+    }
+    &__text {
+        @media (min-width: 991px) {
+            margin-left: 22px;
+        }
+    }
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: clamp(14px, 1.298vw, 17px);
+        line-height: 118%;
+        letter-spacing: 0.01em;
+        color: #fff;
+    }
+    &__time {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.221vw, 16px);
+        line-height: 125%;
+        letter-spacing: 0.01em;
+        color: #34653F;
+
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+    &__phone {
+        @media (max-width: 991px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            padding-bottom: 20px;
+            flex-grow: 1;
+        }
+        & a {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 23px;
+            font-size: clamp(18px, 1.756vw, 23px);
+            line-height: 174%;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+            position: relative;
+            white-space: nowrap;
+            &::after {
+                content: '';
+                display: none;
+                width: 100%;
+                height: 1.5px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 9px;
+                transition: all .3s ease;
+
+            }
+            @media (any-hover: hover) {
+                &:hover::after{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.burger {
+}
+
+
+
+.burger {
+    display: none;
+}
+@media (max-width: 991px) {
+    body {
+        &.active .burger{
+            span {
+                transform: scale(0);
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top: calc(50% - 0.75px);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:last-child {
+                    transform: rotate(45deg);
+                    top: calc(50% - 0.75px);
+                }
+            }
+        }
+    }
+    .burger {
+        position: relative;
+            display: block;
+            width: 50px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 1001;
+
+            span {
+                transition: all 0.3s ease 0s;
+                left: 0px;
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: #fff;
+                &:first-child {
+                    top: 0px;
+                }
+                &:nth-child(2) {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                &:last-child {
+                    bottom: 0;
+                }
+            }
+    }
+}
