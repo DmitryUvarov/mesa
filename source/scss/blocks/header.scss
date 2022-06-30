@@ -143,6 +143,7 @@ body.active {
 
 .contact-header {
     display: flex;
+    gap: 22px;
     @media (min-width: 991px) {
         margin-left: 21px;
     }
