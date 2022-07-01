@@ -1,5 +1,6 @@
 //@@include('sliders.js');
 //@@include('app/dynamic_adapt.js');
+//@@include('app/spoller.js');
 
 
 const body = document.body;
@@ -21,14 +22,68 @@ testWebP(function (support) {
 //  \\\
 
 
+// Функция для проверки на мобильные устрайства
+var isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function () {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
+
+if (isMobile.any()) {
+    document.querySelector('html').classList.add('_touch');
+}
+// \\\\ Функция для проверки на мобильные устрайства
 
 
 
 // buger
+let html = document.querySelector('html');
 let burgerBtns = [...document.querySelectorAll(".burger")];
 for (const burgerBtn of burgerBtns) {
     burgerBtn.addEventListener("click", function () {
         body.classList.toggle("active");
+        html.classList.toggle("active");
     });
 }
 //  \\\
+
+
+
+window.onload = function () {
+
+    document.addEventListener("click", ducumentActions);
+
+    function ducumentActions(e) {
+        const targerElement = e.target;
+        if (window.innerWidth > 600 && isMobile.any()) {
+            if (targerElement.classList.contains('menu__arrow')) {
+                targerElement.closest('.menu__item').classList.toggle('_hover');
+            }
+            if (!targerElement.closest('.menu__item') && document.querySelectorAll('.menu__item._hover').length > 0) {
+                let targerElementHover = document.querySelectorAll('.menu__item._hover');
+                var targerElementHoverArray = Array.prototype.slice.call(targerElementHover);
+                for (var i = 0; i < targerElementHoverArray.length;) {
+                    targerElementHoverArray[i].classList.remove('_hover');
+                    ++i
+                }
+            }
+
+        }
+    }
+
+}

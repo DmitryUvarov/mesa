@@ -1,0 +1,104 @@
+
+.catalog {
+
+    &__container {
+    }
+    &__body {
+        padding: 65px 0 100px;
+
+        @media (max-width: 767px) {
+            padding: 40px 0 60px;
+        }
+    }
+    &__title {
+        max-width: 337px;
+        margin-bottom: 50px;
+    }
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+    }
+    &__item {
+
+    }
+}
+
+.item-catalog {
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.09);
+    justify-content: space-between;
+    padding: 30px 20px;
+    transition: all .3s ease;
+
+    @media (any-hover: hover) {
+        &:hover {
+            box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.19);
+
+            .item-catalog__button {
+                box-shadow: 0px 1px 17px rgba(8, 140, 77, 0.53);
+            }
+        }
+    }
+
+    @media (min-width: 767px) and (max-width: 991px) {
+        padding: 30px 10px;
+    }
+    @media (max-width: 767px) {
+        padding: 30px 0px;
+    }
+    @media (min-width: 991px) {
+        height: 316px;
+    }
+    &__text {
+        padding: 0 0 15px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        @media (min-width: 767px) and (max-width: 991px) {
+            padding: 0 0 15px 15px;
+        }
+        @media (max-width: 767px) {
+            padding: 0 0 0px 15px;
+        }
+    }
+    &__button {
+        width: 55px;
+        height: 55px;
+        background: #088C4D;
+        box-shadow: 0px 1px 17px rgba(8, 140, 77, 0.33);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease;
+    }
+    &__title {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(18px, 1.908vw, 25px);
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #393939;
+        margin-top: 20px;
+        max-width: 216px ;
+    }
+    &__image {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+
+        & img {
+
+        }
+    }
+}

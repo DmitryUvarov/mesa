@@ -1,0 +1,289 @@
+.connection {
+    background-color: #02300C;
+    background-image: url("../img/connection/map.png");
+    background-repeat: no-repeat;
+    // background-position: bottom 71.71% right 20.9%;
+    background-position: bottom 0 right 0;
+    background-size: contain;
+
+    @media (max-width: 991px) {
+        background-position: top 10% right 0;
+    }
+
+    @media (min-width: 1440px) {
+        background-size: cover;
+    }
+
+    &__container {
+    }
+    &__body {
+        padding: 100px 0;
+
+        @media (max-width: 767px) {
+            padding: 70px 0 50px;
+        }
+    }
+    &__title {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(26px, 2.748vw, 36px);
+        line-height: 111%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+
+    }
+    &__text {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 30px 0 40px;
+        @media (min-width: 991px) {
+            justify-content: center;
+            margin: 65px 0;
+        }
+        & p {
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 122%;
+            color: #FFFFFF;
+            max-width: 175px;
+        }
+        & svg {
+            @media (min-width: 991px) {
+                position: absolute;
+                bottom: -80%;
+                right: 50%;
+                transform: translateX(200%);
+                margin-right: 0;
+            }
+            margin-right: 25px;
+        }
+    }
+    &__form {
+    }
+}
+.form-connection {
+    @media (min-width: 991px) {
+        display: flex;
+    }
+
+    &__form {
+    }
+    &__contact {
+        margin-left: 75px;
+        align-self: flex-end;
+        padding-bottom: 15px;
+        & p {
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 700;
+            font-size: clamp(16px, 1.374vw, 18px);
+            line-height: 122%;
+            color: #FFFFFF;
+        }
+        & a {
+            font-family: 'Arsenal';
+            font-style: normal;
+            font-weight: 700;
+            font-size: clamp(32px, 3.053vw, 40px);
+            line-height: 40px;
+            letter-spacing: 0.01em;
+            color: #FFFFFF;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            @media (max-width: 991px) {
+                text-decoration: underline;
+            }
+
+        }
+        @media (max-width: 991px) {
+            margin-left: 0;
+            margin-top: 30px;
+        }
+    }
+    &__phone {
+        padding-left: 75px;
+        margin-top: 31px;
+        padding-bottom: 20px;
+        @media (max-width: 1100px) {
+            margin-top: 15px;
+        }
+        @media (max-width: 991px) {
+            padding-left: 0;
+        }
+    }
+    &__mail {
+        line-height: 114%;
+        margin-top: 15px;
+        @media (min-width: 991px) {
+            font-size: clamp(27px, 2.672vw, 35px);
+        }
+    }
+    &__adress {
+        margin-top: 50px;
+        padding-left: 75px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 991px) {
+            padding-left: 0;
+        }
+        & svg {
+
+        }
+        & span {
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 100%;
+            color: #FFFFFF;
+            max-width: 147px;
+            margin-left: 22px;
+        }
+    }
+}
+.form-contact {
+    flex-basis: 50%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 40px 35px 45px;
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 227px);
+    grid-template-areas:
+    "a a"
+    "b c"
+    "d d";
+    gap: 0 74px;
+    @media (max-width: 991px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+        "a a"
+        "b b"
+        "c c"
+        "d d";
+        gap: 20px 50px;
+        padding: 20px 15px 25px;
+    }
+
+    &__title {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(20px, 2.061vw, 27px);
+        line-height: 132.5%;
+        letter-spacing: -0.04em;
+        color: #088C4D;
+        margin-bottom: 25px;
+        grid-area: a;
+        max-width: 560px;
+        @media (max-width: 767px) {
+            margin-bottom: 5px;
+        }
+    }
+    &__fieldset {
+
+        & label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        & span {
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0.01em;
+            color: #383838;
+            margin-bottom: 15px;
+        }
+        & input {
+            background: #EDEDED;
+            border-radius: 5px;
+            font-family: 'Muller';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 160%;
+            letter-spacing: 0.01em;
+            color: #000;
+            padding: 13px 25px;
+            @media (min-width: 991px) {
+                max-width: 227px;
+            }
+
+            &:focus {
+                outline: 2px solid #383838;
+                outline-width: 2px;
+            }
+        }
+    }
+    &__button {
+        display: flex;
+        align-items: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: clamp(18px, 1.527vw, 20px);
+        line-height: 160%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        background: #107B0E;
+        box-shadow: 0px 16px 24px rgba(16, 123, 14, 0.3);
+        border-radius: 5px;
+        padding: 19px 25px 19px 30px;
+        transition: all .3s ease;
+        margin-left: auto;
+        @media (max-width: 767px) {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        & svg {
+            margin-left: 15px;
+            transition: all .3s ease;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                box-shadow: 0px 16px 24px rgba(16, 123, 14, 0.5);
+                & svg {
+                    transform: translateX(5px);
+                }
+            }
+        }
+        &:focus {
+            outline: 2px solid #383838;
+            outline-width: 2px;
+        }
+    }
+    .form-contact__fieldset--name {
+        grid-area: b;
+    }
+    .form-contact__fieldset--phone {
+        grid-area: c;
+    }
+    .form-contact__fieldset--btn {
+        grid-area: d;
+        margin-top: 35px;
+
+        margin-right: -130px;
+        @media (max-width: 1310px) {
+            margin-right: -75px;
+        }
+        @media (max-width: 991px) {
+            margin-right: 0;
+        }    }
+
+}

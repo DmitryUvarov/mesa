@@ -95,7 +95,7 @@ function images() {
             optimizationLevel: 2 // 0 to 7
         }))
         .pipe(gulp.dest(path.build.img))
-        .pipe(webp(webp({ quality: 80 })))
+        .pipe(webp(webp({ quality: 100 })))
         .pipe(gulp.dest(path.build.img))
 };
 
@@ -150,6 +150,7 @@ const clean = () => del(path.clean);
 const build = gulp.series(clean, css, js, html, images, sprite, otf2ttf, fonts);
 const start = gulp.series(server);
 
+exports.sprite = sprite;
 exports.build = build;
 exports.default = build;
 exports.start = start;

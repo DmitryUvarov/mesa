@@ -1,0 +1,75 @@
+
+.contacts {
+    margin-top: -70px;
+    &__container {
+    }
+    &__body {
+        background: #02300C;
+        border-radius: 10px;
+        padding: 40px 80px;
+
+
+        @media (min-width: 991px) {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        @media (max-width: 767px) {
+            padding: 30px 40px;
+        }
+        & p {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: clamp(16px, 1.374vw, 18px);
+            line-height: 222%;
+            letter-spacing: 0.01em;
+            color: #D0D0D0;
+
+        }
+    }
+    &__left {
+
+        @media (min-width: 991px) {
+            flex-basis: 60%;
+            border-right: 2px solid #107B0E;
+        }
+    }
+    &__right {
+        @media (min-width: 991px) {
+            padding-left: 45px;
+            padding-top: 0;
+        }
+        padding-top: 20px;
+    }
+    &__phone {
+        font-family: 'Arsenal';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(24px, 2.672vw, 35px);
+        line-height: 114%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-top: 15px;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__mail {
+        font-family: 'Arsenal';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(24px, 2.672vw, 35px);
+        line-height: 114%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        margin-top: 15px;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
