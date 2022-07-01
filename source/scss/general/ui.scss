@@ -44,3 +44,26 @@
         z-index: -1;
     }
 }
+
+
+
+.page-blog__title {
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(32px, 3.053vw, 40px);
+    line-height: 132.5%;
+    letter-spacing: -0.04em;
+    color: #088C4D;
+    max-width: 789px;
+}
+.page-blog__text {
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.221vw, 16px);
+    line-height: 160%;
+    letter-spacing: 0.01em;
+    color: #000000;
+    max-width: 1089px;
+}

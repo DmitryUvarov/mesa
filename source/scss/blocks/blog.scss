@@ -1,3 +1,27 @@
+.page__blog {
+
+    .blog__body {
+        padding: 175px 0 125px;
+
+        @media (max-width: 991px) {
+            padding: 215px 0 85px;
+        }
+
+    }
+    .blog__title {
+        font-size: clamp(32px, 3.053vw, 40px);
+        color: #088C4D;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .blog__item {
+        background: #FFFFFF;
+        box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.13);
+        border-radius: 10px;
+    }
+}
+
+
 .blog {
     position: relative;
 

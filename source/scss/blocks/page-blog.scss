@@ -1,0 +1,128 @@
+
+.about-company {
+
+    &__container {
+    }
+    &__body {
+        padding: 135px 0 80px;
+        @media (max-width: 767px) {
+            padding: 50px 0 50px;
+        }
+    }
+    &__block {
+    }
+}
+
+.block-about-company {
+    &:not(:last-child) {
+        margin-bottom: 55px;
+        @media (max-width: 767px) {
+            margin-bottom: 40px;
+        }
+    }
+
+
+
+
+
+    &--image-right {
+        @media (min-width: 767px) {
+            margin-bottom: 80px !important;
+        }
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+        }
+
+
+        .page-blog__title {
+            padding-top: 20px;
+            margin-bottom: 30px;
+        }
+        .page-blog__text {
+            max-width: 699px;
+        }
+
+        .block-about-company__text {
+            @media (min-width: 767px) {
+                margin-right: clamp(40px,8.74vw,180px);
+            }
+        }
+        .block-about-company__image {
+            height: auto;
+            display: flex;
+            align-items: center;
+            @media (max-width: 767px) {
+                margin: 25px 0 0;
+                padding: 0 0 58% 0;
+
+            }
+            @media (max-width: 991px) {
+                margin: 0 -15px 0;
+                position: relative;
+                width: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+                z-index: -1;
+
+                & img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+
+
+    &--image-top {
+
+        .page-blog__title {
+            margin-bottom: 20px;
+        }
+        .block-about-company__image {
+            display: flex;
+            align-items: center;
+            margin-bottom: 55px;
+
+            @media (max-width: 767px) {
+                // flex-direction: column;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                justify-items: center;
+                margin-bottom: 40px;
+                &>:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+            @media (max-width: 454px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            &>:not(:last-child) {
+                margin-right: 50px;
+            }
+        }
+    }
+
+
+    &--text {
+        .page-blog__title {
+            margin-bottom: 25px;
+        }
+        .page-blog__text {
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+
+}

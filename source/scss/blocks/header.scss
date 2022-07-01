@@ -41,6 +41,7 @@ body.active header{
         padding: 0 30px;
         @media (max-width: 991px) {
             display: grid;
+            grid-template-columns: repeat(2, 1fr);
             grid-template-areas:
             "a d"
             "c c";
@@ -65,7 +66,7 @@ body.active header{
     }
     & .burger {
         grid-area: d;
-        justify-self: center;
+        justify-self: end;
     }
 }
 body.active {
@@ -240,7 +241,6 @@ body.active {
 
 .contact-header {
     display: flex;
-    gap: 22px;
     @media (min-width: 991px) {
         margin-left: 21px;
     }
@@ -289,7 +289,7 @@ body.active {
             font-style: normal;
             font-weight: 700;
             font-size: 23px;
-            font-size: clamp(18px, 1.756vw, 23px);
+            font-size: clamp(15px, 1.756vw, 23px);
             line-height: 174%;
             letter-spacing: 0.01em;
             color: #FFFFFF;
