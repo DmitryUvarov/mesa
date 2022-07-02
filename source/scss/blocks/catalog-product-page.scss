@@ -1,0 +1,19 @@
+.catalog-product-page {
+
+
+
+    & .catalog__list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+
+        @media (max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    & .catalog__item {
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,138 @@
+
+.characteristics {
+
+
+
+    &__container {
+    }
+    &__body {
+        padding-top: 100px;
+        @media (max-width: 991px) {
+            padding-top: 80px;
+        }
+        @media (max-width: 767px) {
+            padding-top: 60px;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: clamp(18px, 3.206vw, 42px);
+        line-height: 119%;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 750px;
+        &::after {
+            display: none;
+        }
+    }
+    &__items {
+        position: relative;
+        padding-bottom: 45px;
+    }
+    &__item {
+    }
+    &__bg {
+        position: absolute;
+    }
+}
+
+
+
+.item-characteristics {
+
+    margin-top: 60px;
+    @media (max-width: 991px) {
+        margin-top: 45px;
+    }
+    @media (max-width: 767px) {
+        margin-top: 30px;
+    }
+    &__title {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.221vw, 16px);
+        line-height: 312%;
+        color: #000000;
+        min-height: 50px;
+    }
+    &__block {
+
+        @media (min-width: 1100px) {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+        }
+    }
+    &__image {
+        @media (max-width: 1100px) {
+            margin-bottom: 25px;
+        }
+    }
+    &__info {
+    }
+}
+
+.info-characteristics-item {
+    display: flex;
+    flex: 1 1 auto;
+    border: 2px solid #088C4D;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin;
+
+
+    &::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #d3d3d3;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #088C4D;
+    }
+    &__column {
+    }
+}
+
+
+.info-characteristics-column {
+
+    flex-grow: 1;
+
+    &__title,
+    &__text {
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid #000000;
+        padding: 0 15px;
+        white-space: pre;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &__title {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 700;
+        font-size: clamp(14px, 1.221vw, 16px);
+        line-height: 212%;
+        text-align: center;
+        color: #000000;
+    }
+    &__text {
+        font-family: 'Muller';
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(14px, 1.221vw, 16px);
+        line-height: 187.5%;
+        text-align: center;
+        color: #000000;
+        min-height: 30px;
+    }
+}
