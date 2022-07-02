@@ -1,6 +1,7 @@
 //@@include('sliders.js');
 //@@include('app/dynamic_adapt.js');
 //@@include('app/spoller.js');
+//@@include('app/inputmask.js');
 
 
 const body = document.body;
@@ -87,3 +88,25 @@ window.onload = function () {
     }
 
 }
+
+function formatPhoneNumber(phoneNumberString) {
+    var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+    if (cleaned.length >= 10) var match = cleaned.match(/^(\d{1,10})(\d{9})$/);
+    if (match) return match[2]
+    return null
+}
+
+let Inputphone = document.querySelector('#phone');
+let pastedValue = '+998'
+Inputmask("+\\9\\98(99) 999-99-99", {
+    // placeholder: '',
+    clearIncomplete: true,
+    clearMaskOnLostFocus: true,
+    showMaskOnHover: false,
+    onBeforePaste: function (pastedValue, opts) {
+        return formatPhoneNumber(pastedValue);
+    }
+    // onincomplete: function () {
+
+    // }
+}).mask(Inputphone);
